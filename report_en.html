@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Welcome to the Gowanus Guide</title>
+    <title>Report an Incident</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -32,51 +32,71 @@
 
 <body>
 
-    <!-- Header -->
-    <header id="top" class="header">
-        <div class="text-vertical-center">
-            <h1>Welcome to the Gowanus Guide</h1>
-            <h3>Choose a language</h3>
-            <br>
-            <a href="en.html" class="btn btn-dark btn-lg">English</a>
-            <a href="es.html" class="btn btn-dark btn-lg">Español</a>
+     <!-- Navigation -->
+    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><h4>g<sup>2</sup></h4></a>
+    <nav id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><h4>g<sup>2</sup></h4></a>
+            <li class="sidebar-brand">
+                <a href="index.html" onclick=$("#menu-close").click();>Change Language</a>
+            </li>
+            <li>
+                <a href="en.html" onclick=$("#menu-close").click();>Map</a>
+            </li>
+            <li>
+                <a href="announcements_en.html" onclick=$("#menu-close").click();>Announcements</a>
+            </li>
+            <li>
+                <a href="report_en.html" onclick=$("#menu-close").click();>Report an Incident</a>
+            </li>
+            <li>
+                <a href="http://www1.nyc.gov/site/planning/index.page" onclick=$("#menu-close").click();>City Planning Website</a>
+            </li>
+            <li>
+                <a href="https://capitalplanning.nyc.gov/facilities/explorer#13.36/40.6745/-74.0042" onclick=$("#menu-close").click();>NYC Facilities Explorer</a>
+            </li>
+        </ul>
+    </nav>
+
+
+<!-- Services -->
+    <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
+    <header id="incidents" class="header bg-primary" style="background:#c63333">
+        <div class="container text-vertical-center">
+            <div class="row text-center">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <h2>Report an Incident</h2>
+                    <hr class="small">
+                    <form action="#" method="GET">
+                        
+                        <div class="row">
+                          <div class="col-lg-6" style="width:50%; margin:0 auto; float:none">
+                            <div>
+                              <textarea type="text" name="report" rows="5" class="form-control" placeholder="What is your incident..." style="width:100%; margin:0 auto; float:none"></textarea>
+                            </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-6" style="width:50%; margin:0 auto; float:none">
+                            <button class="btn btn-primary" type="submit">Submit Report!</button>
+                            </div>
+                        </div>
+
+                    </form>
+                    
+
+
+                </div>
+                <!-- /.col-lg-10 -->
+            </div>
+            <!-- /.row -->
         </div>
+        <!-- /.container -->
     </header>
 
+
     
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h4><strong>Start Bootstrap</strong>
-                    </h4>
-                    <p>3481 Melrose Place
-                        <br>Beverly Hills, CA 90210</p>
-                    <ul class="list-unstyled">
-                        <li><i class="fa fa-phone fa-fw"></i> (123) 456-7890</li>
-                        <li><i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:name@example.com">name@example.com</a>
-                        </li>
-                    </ul>
-                    <br>
-                    <ul class="list-inline">
-                        <li>
-                            <a href="#"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-dribbble fa-fw fa-3x"></i></a>
-                        </li>
-                    </ul>
-                    <hr class="small">
-                    <p class="text-muted">Copyright &copy; Your Website 2014</p>
-                </div>
-            </div>
-        </div>
-        <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
-    </footer>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
