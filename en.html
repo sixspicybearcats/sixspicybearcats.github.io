@@ -14,6 +14,10 @@
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
+
+
+    <link href="UI-Icon-master/icon.css" rel="stylesheet">
+
     <!-- Custom CSS -->
     <link href="css/stylish-portfolio.css" rel="stylesheet">
 
@@ -60,12 +64,30 @@
 
 
     <!-- Map -->
-    <section id="contact" class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14195.999696825915!2d-73.99845679871707!3d40.6739344969362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a560db693e3%3A0xb05e8b0bdf854b54!2sGowanus%2C+Brooklyn%2C+NY!5e0!3m2!1sen!2sus!4v1500401164581" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    <section id="contact" class="map" style="height:100%;">
+
+        <iframe id="embedded_map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12103.860377764!2d-73.9986063175587!3d40.67473804340861!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a560db693e3%3A0xb05e8b0bdf854b54!2sGowanus%2C+Brooklyn%2C+NY!5e0!3m2!1sen!2sus!4v1500483687789"
+          width="80%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
         <br />
-        <small>
-            <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>
-        </small>
+    </section>
+    <section id="moveable" class="mov" hidden="true" style="height:50%">
+        <iframe style="display:inline"
+                src="https://www.360cities.net/embed_iframe/gowanus-canal-midle-1"
+          width="80%" height="100%" frameborder="0" bgcolor="#000000"
+          target="_blank" allowfullscreen webkitallowfullscreen
+          mozallowfullscreen></iframe>
+        <div style="float:right; width:20%; padding:10px; display:inline; height:100%; overflow:scroll;">
+          <font size=100>
+            <p><a href="report_en.html?word=bus"><i class="fa fa-bus"></i></a></p>
+            <p><a href="report_en.html?word=building"><i class="building icon"></i></a></p>
+            <p><a href="report_en.html"><i class="bicycle icon"></i></a></p>
+            <p><a href="report_en.html"><i class="tree icon"></i></a></p>
+            <p><a href="report_en.html"><i class="subway icon"></i></a></p>
+            <p><a href="report_en.html"><i class="food icon"></i></a></p>
+            <p><a href="report_en.html"><i class="coffee icon"></i></a></p>
+          </font>
+        </div>
     </section>
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
@@ -132,21 +154,29 @@
         var that = $(this);
         that.on('click', onMapClickHandler);
         that.off('mouseleave', onMapMouseleaveHandler);
-        that.find('iframe').css("pointer-events", "none");
+        $('#embedded_map').css("pointer-events", "none");
     }
     var onMapClickHandler = function(event) {
             var that = $(this);
             // Disable the click handler until the user leaves the map area
             that.off('click', onMapClickHandler);
             // Enable scrolling zoom
-            that.find('iframe').css("pointer-events", "auto");
+            $('#embedded_map').css("pointer-events", "auto");
+
+            $('#embedded_map').attr("src", "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3025.9331423434933!2d-73.99302768488991!3d40.67544204778871!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQwJzMxLjYiTiA3M8KwNTknMjcuMCJX!5e0!3m2!1sen!2sus!4v1500483770095");
+
+            $('.map').css("height", "50%");
+
+
             // Handle the mouse leave event
             that.on('mouseleave', onMapMouseleaveHandler);
-        }
+            $('.mov').show();
+    }
         // Enable map zooming with mouse scroll when the user clicks the map
     $('.map').on('click', onMapClickHandler);
     </script>
 
 </body>
+
 
 </html>
