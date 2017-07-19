@@ -9,14 +9,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Map</title>
+    <title>Announcements</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
-
-
-    <link href="UI-Icon-master/icon.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="css/stylish-portfolio.css" rel="stylesheet">
@@ -63,32 +59,76 @@
     </nav>
 
 
-    <!-- Map -->
-    <section id="contact" class="map" style="height:100%;">
 
-        <iframe id="embedded_map"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12103.860377764!2d-73.9986063175587!3d40.67473804340861!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a560db693e3%3A0xb05e8b0bdf854b54!2sGowanus%2C+Brooklyn%2C+NY!5e0!3m2!1sen!2sus!4v1500483687789"
-          width="80%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
-        <br />
-    </section>
-    <section id="moveable" class="mov" hidden="true" style="height:50%">
-        <iframe style="display:inline"
-                src="https://www.360cities.net/embed_iframe/gowanus-canal-midle-1"
-          width="80%" height="100%" frameborder="0" bgcolor="#000000"
-          target="_blank" allowfullscreen webkitallowfullscreen
-          mozallowfullscreen></iframe>
-        <div style="float:right; width:20%; padding:10px; display:inline; height:100%; overflow:scroll;">
-          <font size=100>
-            <p><a href="yes.html?word=bus"><i class="fa fa-bus"></i></a></p>
-            <p><a href="yes.html?word=building"><i class="building icon"></i></a></p>
-            <p><a href="yes.html"><i class="bicycle icon"></i></a></p>
-            <p><a href="yes.html"><i class="tree icon"></i></a></p>
-            <p><a href="yes.html"><i class="subway icon"></i></a></p>
-            <p><a href="yes.html"><i class="food icon"></i></a></p>
-            <p><a href="yes.html"><i class="coffee icon"></i></a></p>
-          </font>
+
+   
+
+    <!-- Portfolio -->
+    <section id="programs" class="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <h2>Other Suggestions</h2>
+                    <hr class="small">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="portfolio-item">
+                                    <img style="height:100%; width:100%;"  src="img/park.jpg">
+                                    <p><strong style="font-size:large">Suggested:Sand Castle</strong></p>
+                                    <p style="font-size:medium;">
+                                     <p><strong> Name:</strong> Sharon Cheung </p>  
+                                        <p><strong>Location:</strong> Gowanus Park </p>  
+                                        <p><strong>Description:</strong> A sandbox should be added to the playground.<></p>
+
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="portfolio-item">
+                                    <img style="height:100%; width:100%;" src="img/icon.jpg">
+                                    <p><strong style="font-size:large">Suggested: Public Library</strong></p>
+                                    <p style="font-size:medium;">
+                                        <p><strong> Name:</strong> Rachel Mohabir </p>  
+                                        <p><strong>Location:</strong> The corner of Berkeley Pl and 4th Ave. </p>  
+                                        <p><strong>Description:</strong> This location is great for placing a library </p></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="portfolio-item">
+                                    <img style="height:100%; width:100%;" src="img/pool.jpg">
+                                    <p><strong style="font-size:large">Suggestion:New Pool Lifeguard</strong></p>
+                                    <p style="font-size:medium;">
+                                        <p><strong> Name:</strong> Anna Wong </p>  
+                                        <p><strong>Location:</strong> Gowanus Park </p>  
+                                        <p><strong>Description:</strong> Lifeguards should be added to watch the safety of those who are swimming. </p>
+                                    </p>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-6">
+                            <div class="portfolio-item">
+                                    <img style="height:100%; width:100%;" src="img/tree.jpg">
+                                    <p><strong style="font-size:large">Suggested: A New Tree</strong></p>
+                                    <p style="font-size:medium;">
+                                        <p><strong> Name:</strong> Justina Helbert </p>  
+                                        <p><strong>Location:</strong> Sponge Park 166 2nd st, Brooklyn. NY 1123 </p>  
+                                        <p><strong>Description:</strong> I would like to see a dogwood tree planted there. </p>
+                                    </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.row (nested)\ -->
+                    <a href="#" class="btn btn-dark">Back to Top</a>
+                </div>
+                <!-- /.col-lg-10 -->
+            </div>
+            <!-- /.row -->
         </div>
+        <!-- /.container -->
     </section>
+
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
@@ -154,29 +194,21 @@
         var that = $(this);
         that.on('click', onMapClickHandler);
         that.off('mouseleave', onMapMouseleaveHandler);
-        $('#embedded_map').css("pointer-events", "none");
+        that.find('iframe').css("pointer-events", "none");
     }
     var onMapClickHandler = function(event) {
             var that = $(this);
             // Disable the click handler until the user leaves the map area
             that.off('click', onMapClickHandler);
             // Enable scrolling zoom
-            $('#embedded_map').css("pointer-events", "auto");
-
-            $('#embedded_map').attr("src", "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3025.9331423434933!2d-73.99302768488991!3d40.67544204778871!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQwJzMxLjYiTiA3M8KwNTknMjcuMCJX!5e0!3m2!1sen!2sus!4v1500483770095");
-
-            $('.map').css("height", "50%");
-
-
+            that.find('iframe').css("pointer-events", "auto");
             // Handle the mouse leave event
             that.on('mouseleave', onMapMouseleaveHandler);
-            $('.mov').show();
-    }
+        }
         // Enable map zooming with mouse scroll when the user clicks the map
     $('.map').on('click', onMapClickHandler);
     </script>
 
 </body>
-
 
 </html>
