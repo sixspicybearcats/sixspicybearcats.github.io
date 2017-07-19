@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
 
@@ -32,10 +32,37 @@
 
 <body>
 
+    
     <!-- Navigation -->
+    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><h4>g<sup>2</sup></h4></a>
+    <nav id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><h4>g<sup>2</sup></h4></a>
+            <li class="sidebar-brand">
+                <a href="index.html" onclick=$("#menu-close").click();>Cambiar Lingua</a>
+            </li>
+            <li>
+                <a href="en.html" onclick=$("#menu-close").click();>Mapa</a>
+            </li>
+            <li>
+                <a href="announcements_en.html" onclick=$("#menu-close").click();>Anuncios</a>
+            </li>
+            <li>
+                <a href="report_en.html" onclick=$("#menu-close").click();>Informar de un Incidente</a>
+            </li>
+            <li>
+                <a href="http://www1.nyc.gov/site/planning/index.page" onclick=$("#menu-close").click();>Sitio Web de Planificación Urbana
+</a>
+            </li>
+            <li>
+                <a href="https://capitalplanning.nyc.gov/facilities/explorer#13.36/40.6745/-74.0042" onclick=$("#menu-close").click();>Nueva York Explorar de Instalaciones</a>
+            </li>
+        </ul>
+    </nav>
+    
 <!-- Map -->
     <section id="contact" class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d24208.012509443415!2d-73.9984568!3d40.6739345!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a560db693e3%3A0xb05e8b0bdf854b54!2sGowanus%2C+Brooklyn%2C+Nueva+York%2C+EE.+UU.!5e0!3m2!1ses!2ses!4v1500401503609" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <iframe src="https://www.google.es/maps/embed?pb=!1m14!1m8!1m3!1d24208.012509443415!2d-73.9984568!3d40.6739345!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a560db693e3%3A0xb05e8b0bdf854b54!2sGowanus%2C+Brooklyn%2C+Nueva+York%2C+EE.+UU.!5e0!3m2!1ses!2ses!4v1500401503609" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
         <br />
         <small>
             <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>
